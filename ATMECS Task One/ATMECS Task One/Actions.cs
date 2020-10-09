@@ -13,43 +13,43 @@ namespace ATMECS_Task_One
         public static void Action1()
         {
             _semaphore.WaitOne();
-            Console.WriteLine($"Action 1 Started");            
+            Console.WriteLine($"Action 1 Started in Thread Id: "+Thread.CurrentThread.ManagedThreadId);            
             // For Checking
             Thread.Sleep(3000);
-            Console.WriteLine($"Action 1 Completed");
+            Console.WriteLine($"Action 1 Completed in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             _semaphore.Release();
         }
         // Action 2
         public static void Action2()
         {
             _semaphore.WaitOne();
-            Console.WriteLine($"Action 2 Started");
+            Console.WriteLine($"Action 2 Started in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             
             // For Checking
             Thread.Sleep(3000);
-            Console.WriteLine($"Action 2 Completed");
+            Console.WriteLine($"Action 2 Completed in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             _semaphore.Release();
         }
         // Action 3
         public static void Action3()
         {
             _semaphore.WaitOne();
-            Console.WriteLine($"Action 3 Started");
+            Console.WriteLine($"Action 3 Started in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             
             // For Checking
             Thread.Sleep(3000);
-            Console.WriteLine($"Action 3 Completed");
+            Console.WriteLine($"Action 3 Completed in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             _semaphore.Release();
         }
         // Action 4
         public static void Action4()
         {
             _semaphore.WaitOne();
-            Console.WriteLine($"Action 4 Started");
+            Console.WriteLine($"Action 4 Started in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             
             // For Checking
             Thread.Sleep(3000);
-            Console.WriteLine($"Action 4 Completed");
+            Console.WriteLine($"Action 4 Completed in Thread Id: " + Thread.CurrentThread.ManagedThreadId);
             _semaphore.Release();
         }
     }
